@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run episimmer/Main.py
+web: sh setup.sh && streamlit run src/Main.py
