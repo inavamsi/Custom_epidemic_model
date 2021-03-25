@@ -13,7 +13,7 @@ class ReadConfiguration():
 		self.agent_info_keys=None
 		self.interaction_info_keys=None
 
-		self.f = open('config.txt','r')
+		self.f = open('src/config.txt','r')
 		self.worlds=(int)(self.get_value())
 		self.time_steps=(int)(self.get_value())
 		
@@ -63,7 +63,7 @@ class ReadConfiguration():
 
 class ReadAgents():
 	def __init__(self,filename,config_obj):
-		f=open(filename,'r')
+		f=open('src/'+filename,'r')
 		self.n=int(self.get_value(f.readline()))
 		agent_info_keys=self.get_value(f.readline())
 		if agent_info_keys != config_obj.agent_info_keys:
@@ -93,7 +93,7 @@ class ReadAgents():
 class ReadFilesList():
 	def __init__(self,filename):
 		self.file_list=[]
-		f=open(filename,'r')
+		f=open('src/'+filename,'r')
 		lines=f.readlines()
 		separator=' '
 		text=separator.join(lines)
@@ -108,7 +108,7 @@ class ReadInteractions():
 		self.agents_obj=agents_obj
 		if filename=="" or filename==None:
 			return
-		f=open(filename,'r')
+		f=open('src/'+filename,'r')
 		self.no_interactions=int(self.get_value(f.readline()))
 		interaction_info_keys=self.get_value(f.readline())
 		if interaction_info_keys != config_obj.interaction_info_keys:
@@ -144,7 +144,7 @@ class ReadLocations():
 		self.locations={}
 		if filename=="" or filename==None:
 			return
-		f=open(filename,'r')
+		f=open('src/'+filename,'r')
 		self.no_locations=int(self.get_value(f.readline()))
 		location_info_keys=self.get_value(f.readline())
 		if location_info_keys != config_obj.location_info_keys:
@@ -176,7 +176,7 @@ class ReadEvents():
 		self.locations_obj=locations_obj
 		if filename=="" or filename==None:
 			return
-		f=open(filename,'r')
+		f=open('src/'+filename,'r')
 		self.no_events=int(self.get_value(f.readline()))
 		event_info_keys=self.get_value(f.readline())
 		if event_info_keys != config_obj.event_info_keys:
