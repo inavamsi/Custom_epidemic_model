@@ -4,7 +4,7 @@ Use can construct sutom agent based epidemic compartment model. The default mode
 
 This repo was built using the Episimmer codebase : https://github.com/corollary-health/episimmer
 
-Test out the UI at : https://custom-epidemic-model.herokuapp.com
+Test out the UI at : https://share.streamlit.io/inavamsi/custom_epidemic_model/main/Main.py
 
 ## Run
 To run locally
