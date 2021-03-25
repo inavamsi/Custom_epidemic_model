@@ -10,4 +10,4 @@ Test out the UI at : https://custom-epidemic-model.herokuapp.com
 To run locally
 
     cd YACHT
-    streamlit run src/Main.py
+    streamlit run Main.py
