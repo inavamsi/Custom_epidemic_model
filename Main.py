@@ -137,12 +137,12 @@ for i in range(no_transitions):
 		l=[]
 		for istate in infected_states:
 			l.append(None)
-			infectious_dict[istate]=float(col3.text_input("Rate of infection from compartment "+istate, 0.01))
+			infectious_dict[istate]=float(col3.text_input("Rate of infection from compartment "+istate+ " for transition "+str(i+1), 0.01))
 		model.set_transition(state1, state2, model.p_infection(l,None))
 	else:
 		rate=float(col3.text_input("Rate constant for transition "+str(i+1), 0.03))
 		model.set_transition(state1, state2, model.p_standard(rate))
-		
+
 
 def event_contribute_fn(agent,event_info,location,current_time_step):
 		if agent.state in infected_states:
@@ -158,9 +158,9 @@ model.set_event_contribution_fn(event_contribute_fn)
 model.set_event_recieve_fn(event_recieve_fn)
 
 
-plt1.title('Custom compartment model')  
-nx.draw_networkx(G, with_label = True, node_color ='green')
-st.pyplot(plt1)
+#plt1.title('Custom compartment model')
+#nx.draw_networkx(G, with_label = False, node_color ='green')
+#st.pyplot(plt1)
 
 
 agents_filename=config_obj.agents_filename
@@ -190,5 +190,3 @@ else:
 
 world_obj=World.World(config_obj,model,policy_list,event_restriction_fn,agents_filename,interactions_files_list,locations_filename,events_files_list)
 world_obj.simulate_worlds()
-
-
