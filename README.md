@@ -9,7 +9,6 @@ Test out the UI at : https://share.streamlit.io/inavamsi/custom_epidemic_model/m
 ## Run
 To run locally
 
-    cd YACHT
     streamlit run Main.py
 
 This opens up a UI that is fairly simple to navigate and build a custom model. Some standard models include SIR, SEIR, SEYAR, SIRD, MSIRS, ... to name a few.
