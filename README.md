@@ -1,6 +1,6 @@
 # Custom compartment model
 
-Use can construct a custom agent based epidemic compartment model. The default model is an SIR model but can be easily changed by changing the number of compartments and transitions.
+This can be used to construct a custom agent based epidemic compartment model. The default model is an SIR model but can be easily changed by changing the number of compartments and transitions.
 
 This repo was built using the Episimmer codebase : https://github.com/corollary-health/episimmer
 
